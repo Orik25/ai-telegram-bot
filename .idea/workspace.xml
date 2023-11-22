@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="" />
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added history for chat">
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/interfaces/UserService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +19,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,16 +43,24 @@
     </option>
   </component>
   <component name="ProjectId" id="2YX4Q2Ifyz4kctgAKE2QyeOUy4Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/java/ai-telegram-bot&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "chat-gpt-logic",
+    "last_opened_file_path": "E:/java/multy-server-solver"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.orik.botapi.exception" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.start-bot">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
@@ -82,6 +105,50 @@
       <option name="presentableId" value="Default" />
       <updated>1700658570228</updated>
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1700662541948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700662541948</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added properties for Chat GPT">
+      <created>1700663537928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700663537928</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added logging logic for bot">
+      <created>1700664562027</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700664562027</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added user registration in first &quot;/start&quot;">
+      <created>1700673435519</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700673435519</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added history for chat">
+      <created>1700680412178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700680412178</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <MESSAGE value="added properties for Chat GPT" />
+    <MESSAGE value="added logging logic for bot" />
+    <MESSAGE value="added user registration in first &quot;/start&quot;" />
+    <MESSAGE value="added history for chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="added history for chat" />
   </component>
 </project>
