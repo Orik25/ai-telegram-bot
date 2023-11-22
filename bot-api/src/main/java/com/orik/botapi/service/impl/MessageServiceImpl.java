@@ -35,7 +35,7 @@ public class MessageServiceImpl implements MessageService {
             return null;
         }
         else {
-            return newMessage;
+            return messageRepository.save(newMessage);
         }
     }
 }
