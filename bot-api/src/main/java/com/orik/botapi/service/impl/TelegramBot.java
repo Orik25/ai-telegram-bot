@@ -38,7 +38,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             "Type /help to see this message again";
 
     @Autowired
-    public TelegramBot(BotConfig botConfig, ChatGPTConfig chatGPTConfig,UserService userService,MessageService messageService) {
+    public TelegramBot(BotConfig botConfig, ChatGPTConfig chatGPTConfig, UserService userService, MessageService messageService) {
         this.botConfig = botConfig;
         this.chatGPTConfig = chatGPTConfig;
         this.userService = userService;
@@ -50,7 +50,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         try {
             this.execute(new SetMyCommands(commands, new BotCommandScopeDefault(), null));
         } catch (TelegramApiException e) {
-            log.error("Error setting bot`d command list: "+ e.getMessage());
+            log.error("Error setting bot`d command list: " + e.getMessage());
         }
     }
 
@@ -71,10 +71,9 @@ public class TelegramBot extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
             String firstName = update.getMessage().getChat().getFirstName();
 
-            try{
-                messageService.addNew(new NewMessageDTO(messageText,chatId,botConfig.getId()));
-            }
-            catch (UserNotFoundException ex){
+            try {
+                messageService.addNew(new NewMessageDTO(messageText, chatId, botConfig.getId()));
+            } catch (UserNotFoundException ex) {
                 log.error("Error occurred: " + ex.getMessage());
             }
 
@@ -84,7 +83,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                         greeting(chatId, firstName);
                     } else {
                         userService.registerUser(new UserRegistrationDTO(chatId, update.getMessage().getChat().getUserName(), update.getMessage().getChat().getFirstName(), update.getMessage().getChat().getLastName()));
-                        messageService.addNew(new NewMessageDTO(messageText,chatId,botConfig.getId()));
+                        messageService.addNew(new NewMessageDTO(messageText, chatId, botConfig.getId()));
                         greeting(chatId, firstName);
                     }
                 }
@@ -96,7 +95,6 @@ public class TelegramBot extends TelegramLongPollingBot {
     }
 
     private void greeting(long chatId, String name) {
-        log.info("Replied to user " + name);
         sendMessage(chatId, "Hi, " + name + ", nice to meet you");
 
     }
@@ -105,13 +103,12 @@ public class TelegramBot extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(String.valueOf(chatId));
         sendMessage.setText(textToSend);
-
         try {
+            log.info("Replying to " + chatId);
             execute(sendMessage);
-            try{
+            try {
                 messageService.addNew(new NewMessageDTO(textToSend, botConfig.getId(), chatId));
-            }
-            catch (UserNotFoundException ex){
+            } catch (UserNotFoundException ex) {
                 log.error("Error occurred: " + ex.getMessage());
             }
         } catch (TelegramApiException e) {

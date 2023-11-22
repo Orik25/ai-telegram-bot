@@ -17,7 +17,7 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public Role getUserRole(){
+    public Role getUserRole() {
         return roleRepository.findById(3L)
                 .orElseThrow(() -> new RoleNotFoundException("Role with id: 3 not found!"));
     }

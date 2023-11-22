@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added user registration in first &quot;/start&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added history for chat">
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/RoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/interfaces/UserService.java" afterDir="false" />
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700673435519</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added history for chat">
+      <created>1700680412178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700680412178</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -140,6 +148,7 @@
     <MESSAGE value="added properties for Chat GPT" />
     <MESSAGE value="added logging logic for bot" />
     <MESSAGE value="added user registration in first &quot;/start&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added user registration in first &quot;/start&quot;" />
+    <MESSAGE value="added history for chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="added history for chat" />
   </component>
 </project>

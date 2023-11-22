@@ -6,6 +6,7 @@ import com.orik.botapi.exception.UserNotFoundException;
 
 public interface UserService {
     boolean isRegistered(long id);
+
     User registerUser(UserRegistrationDTO user);
 
     User findByChatId(long id) throws UserNotFoundException;
