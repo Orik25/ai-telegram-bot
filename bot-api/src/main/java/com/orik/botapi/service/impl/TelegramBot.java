@@ -1,9 +1,12 @@
 package com.orik.botapi.service.impl;
 
 
+import com.orik.botapi.DTO.message.NewMessageDTO;
 import com.orik.botapi.DTO.user.UserRegistrationDTO;
 import com.orik.botapi.config.BotConfig;
 import com.orik.botapi.config.ChatGPTConfig;
+import com.orik.botapi.exception.UserNotFoundException;
+import com.orik.botapi.service.interfaces.MessageService;
 import com.orik.botapi.service.interfaces.UserService;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatMessage;
@@ -27,18 +30,19 @@ import java.util.List;
 public class TelegramBot extends TelegramLongPollingBot {
     private final BotConfig botConfig;
     private final ChatGPTConfig chatGPTConfig;
-
-    private UserService userService;
+    private final MessageService messageService;
+    private final UserService userService;
     private static final String HELP_TEXT = "This bot is created to communicate with Chat GPT from Telegram\n\n" +
             "You can execute commands from the main menu on the left or by typing a command:\n\n" +
             "Type /start to see a welcome message\n\n" +
             "Type /help to see this message again";
 
     @Autowired
-    public TelegramBot(BotConfig botConfig, ChatGPTConfig chatGPTConfig,UserService userService) {
+    public TelegramBot(BotConfig botConfig, ChatGPTConfig chatGPTConfig,UserService userService,MessageService messageService) {
         this.botConfig = botConfig;
         this.chatGPTConfig = chatGPTConfig;
         this.userService = userService;
+        this.messageService = messageService;
 
         List<BotCommand> commands = new ArrayList<>();
         commands.add(new BotCommand("/start", "get greeting message"));
@@ -66,12 +70,21 @@ public class TelegramBot extends TelegramLongPollingBot {
             String messageText = update.getMessage().getText();
             long chatId = update.getMessage().getChatId();
             String firstName = update.getMessage().getChat().getFirstName();
+
+            try{
+                messageService.addNew(new NewMessageDTO(messageText,chatId,botConfig.getId()));
+            }
+            catch (UserNotFoundException ex){
+                log.error("Error occurred: " + ex.getMessage());
+            }
+
             switch (messageText) {
                 case "/start" -> {
                     if (userService.isRegistered(chatId)) {
                         greeting(chatId, firstName);
                     } else {
                         userService.registerUser(new UserRegistrationDTO(chatId, update.getMessage().getChat().getUserName(), update.getMessage().getChat().getFirstName(), update.getMessage().getChat().getLastName()));
+                        messageService.addNew(new NewMessageDTO(messageText,chatId,botConfig.getId()));
                         greeting(chatId, firstName);
                     }
                 }
@@ -95,6 +108,12 @@ public class TelegramBot extends TelegramLongPollingBot {
 
         try {
             execute(sendMessage);
+            try{
+                messageService.addNew(new NewMessageDTO(textToSend, botConfig.getId(), chatId));
+            }
+            catch (UserNotFoundException ex){
+                log.error("Error occurred: " + ex.getMessage());
+            }
         } catch (TelegramApiException e) {
             log.error("Error occurred: " + e.getMessage());
         }

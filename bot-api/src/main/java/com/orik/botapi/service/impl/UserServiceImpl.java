@@ -4,6 +4,7 @@ import com.orik.botapi.DAO.UserRepository;
 import com.orik.botapi.DTO.user.UserConverterDTO;
 import com.orik.botapi.DTO.user.UserRegistrationDTO;
 import com.orik.botapi.entity.User;
+import com.orik.botapi.exception.UserNotFoundException;
 import com.orik.botapi.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User registerUser(UserRegistrationDTO user) {
         return userRepository.save(userConverter.convertToEntity(user));
+    }
+
+    @Override
+    public User findByChatId(long id) throws UserNotFoundException{
+        return userRepository.findByChatId(id)
+                .orElseThrow(()->new UserNotFoundException("User with chatId: "+id+" is not found!"));
     }
 }
