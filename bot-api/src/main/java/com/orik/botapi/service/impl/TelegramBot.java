@@ -1,8 +1,10 @@
-package com.orik.botapi.service;
+package com.orik.botapi.service.impl;
 
 
+import com.orik.botapi.DTO.user.UserRegistrationDTO;
 import com.orik.botapi.config.BotConfig;
 import com.orik.botapi.config.ChatGPTConfig;
+import com.orik.botapi.service.interfaces.UserService;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatMessage;
 import com.theokanning.openai.service.OpenAiService;
@@ -25,15 +27,19 @@ import java.util.List;
 public class TelegramBot extends TelegramLongPollingBot {
     private final BotConfig botConfig;
     private final ChatGPTConfig chatGPTConfig;
+
+    private UserService userService;
     private static final String HELP_TEXT = "This bot is created to communicate with Chat GPT from Telegram\n\n" +
             "You can execute commands from the main menu on the left or by typing a command:\n\n" +
             "Type /start to see a welcome message\n\n" +
             "Type /help to see this message again";
 
     @Autowired
-    public TelegramBot(BotConfig botConfig, ChatGPTConfig chatGPTConfig) {
+    public TelegramBot(BotConfig botConfig, ChatGPTConfig chatGPTConfig,UserService userService) {
         this.botConfig = botConfig;
         this.chatGPTConfig = chatGPTConfig;
+        this.userService = userService;
+
         List<BotCommand> commands = new ArrayList<>();
         commands.add(new BotCommand("/start", "get greeting message"));
         commands.add(new BotCommand("/help", "get info how to use"));
@@ -61,7 +67,14 @@ public class TelegramBot extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
             String firstName = update.getMessage().getChat().getFirstName();
             switch (messageText) {
-                case "/start" -> greeting(chatId, firstName);
+                case "/start" -> {
+                    if (userService.isRegistered(chatId)) {
+                        greeting(chatId, firstName);
+                    } else {
+                        userService.registerUser(new UserRegistrationDTO(chatId, update.getMessage().getChat().getUserName(), update.getMessage().getChat().getFirstName(), update.getMessage().getChat().getLastName()));
+                        greeting(chatId, firstName);
+                    }
+                }
                 case "/help" -> sendMessage(chatId, HELP_TEXT);
                 default -> sendMessage(chatId, getChatResponse(List.of(messageText)));
             }

@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added properties for Chat GPT">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added logging logic for bot">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/BotApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/BotApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/config/BotConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/config/BotConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/config/BotInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/config/BotInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,12 +50,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/java/ai-telegram-bot&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "chat-gpt-logic",
+    "last_opened_file_path": "E:/java/multy-server-solver"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.start-bot">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
@@ -107,12 +116,20 @@
       <option name="project" value="LOCAL" />
       <updated>1700663537928</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added logging logic for bot">
+      <created>1700664562027</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700664562027</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="added properties for Chat GPT" />
-    <option name="LAST_COMMIT_MESSAGE" value="added properties for Chat GPT" />
+    <MESSAGE value="added logging logic for bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="added logging logic for bot" />
   </component>
 </project>
