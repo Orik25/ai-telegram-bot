@@ -30,6 +30,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findById(Long id) throws UserNotFoundException{
+        return  userRepository.findById(id)
+                .orElseThrow(()-> new UserNotFoundException("User not found with id: " + id));
+    }
+    @Override
+    public User findByChatId(Long id) throws UserNotFoundException {
+        return userRepository.findByChatId(id)
+                .orElseThrow(() -> new UserNotFoundException("User with chatId: " + id + " is not found!"));
+    }
+
+    @Override
     public Page<User> getAllUsersSorted(int page, int size, String sortField, String sortOrder, Long roleId) {
         Sort sort = org.springframework.data.domain.Sort.by(sortField);
 

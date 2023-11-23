@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added registration logic&#10;fixed bug with login non-admin role">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added admin page with users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/RoleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +22,8 @@
       <list>
         <option value="module-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,11 +68,11 @@
       <recent name="E:\java\ai-telegram-bot" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.orik.adminapi.DTO.message" />
+      <recent name="com.orik.adminapi.config" />
       <recent name="com.orik.adminapi.controller" />
       <recent name="com.orik.adminapi.constant" />
       <recent name="com.orik.adminapi.exception" />
-      <recent name="com.orik.adminapi.DTO.user" />
-      <recent name="com.orik.botapi.exception" />
     </key>
   </component>
   <component name="RunManager" selected="Application.start-admin">
@@ -183,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700743651183</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added admin page with users">
+      <created>1700752086331</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700752086331</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -196,6 +202,7 @@
     <MESSAGE value="added entities and repositories" />
     <MESSAGE value="added login logic with correct security" />
     <MESSAGE value="added registration logic&#10;fixed bug with login non-admin role" />
-    <option name="LAST_COMMIT_MESSAGE" value="added registration logic&#10;fixed bug with login non-admin role" />
+    <MESSAGE value="added admin page with users" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin page with users" />
   </component>
 </project>

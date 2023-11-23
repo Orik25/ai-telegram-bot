@@ -9,6 +9,10 @@ import org.springframework.data.domain.Pageable;
 public interface UserService {
     User registerAdmin(AdminRegistrationDTO user);
 
+    User findById(Long id) throws UserNotFoundException;
+    User findByChatId(Long id) throws UserNotFoundException;
+
+
     Page<User> getAllUsersSorted(int page, int size, String sortField, String sortOrder, Long userId);
 
     User findByUserName(String userName) throws UserNotFoundException;
