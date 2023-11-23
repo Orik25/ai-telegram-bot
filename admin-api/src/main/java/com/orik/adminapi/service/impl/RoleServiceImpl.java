@@ -21,4 +21,10 @@ public class RoleServiceImpl implements RoleService {
         return roleRepository.findById(2L)
                 .orElseThrow(() -> new RoleNotFoundException("Role with id: 2 not found!"));
     }
+
+    @Override
+    public Role getUserRole() throws RoleNotFoundException {
+        return roleRepository.findById(3L)
+                .orElseThrow(() -> new RoleNotFoundException("Role with id: 3 not found!"));
+    }
 }

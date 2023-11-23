@@ -7,6 +7,10 @@ import com.orik.adminapi.entity.User;
 import com.orik.adminapi.exception.UserNotFoundException;
 import com.orik.adminapi.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -26,8 +30,25 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Page<User> getAllUsersSorted(int page, int size, String sortField, String sortOrder, Long roleId) {
+        Sort sort = org.springframework.data.domain.Sort.by(sortField);
+
+        if ("desc".equals(sortOrder)) {
+            sort = sort.descending();
+        }
+
+        PageRequest pageRequest = PageRequest.of(page, size, sort);
+        return userRepository.findUsersByRoleRoleId(roleId,pageRequest);
+    }
+
+    @Override
     public User findByUserName(String userName) throws UserNotFoundException {
         return userRepository.findByUserName(userName)
                 .orElseThrow(()-> new UserNotFoundException("User not found with username: " + userName));
+    }
+
+    @Override
+    public Page<User> findByFieldContainingIgnoreCase(String fieldName, String searchValue, Pageable pageable) {
+        return userRepository.findByFieldContainingIgnoreCase(fieldName,searchValue,pageable);
     }
 }

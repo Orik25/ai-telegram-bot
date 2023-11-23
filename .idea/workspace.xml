@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added login logic with correct security">
-      <change afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/validation/UniqueUserName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/validation/UserNameUniqueValidator.java" afterDir="false" />
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added registration logic&#10;fixed bug with login non-admin role">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DTO/user/AdminRegistrationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DTO/user/AdminRegistrationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +23,8 @@
       <list>
         <option value="module-info" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -56,7 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "chat-gpt-logic",
-    "last_opened_file_path": "E:/java/ai-telegram-bot/admin-api/src/main/java/com/orik/adminapi"
+    "last_opened_file_path": "E:/java/testBOT"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -174,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700742442472</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added registration logic&#10;fixed bug with login non-admin role">
+      <created>1700743651183</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700743651183</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -186,6 +195,7 @@
     <MESSAGE value="added .gitignore to parent project" />
     <MESSAGE value="added entities and repositories" />
     <MESSAGE value="added login logic with correct security" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login logic with correct security" />
+    <MESSAGE value="added registration logic&#10;fixed bug with login non-admin role" />
+    <option name="LAST_COMMIT_MESSAGE" value="added registration logic&#10;fixed bug with login non-admin role" />
   </component>
 </project>

@@ -44,7 +44,7 @@ public class SecurityConfig {
     @Bean
     public AuthenticationSuccessHandler successHandler() {
         return (request, response, authentication) -> {
-            response.sendRedirect("/system");
+            response.sendRedirect("/system/users");
 
         };
     }

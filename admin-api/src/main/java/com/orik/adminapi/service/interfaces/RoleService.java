@@ -5,5 +5,6 @@ import com.orik.adminapi.exception.RoleNotFoundException;
 
 public interface RoleService {
     Role getAdminRole() throws RoleNotFoundException;
+    Role getUserRole() throws RoleNotFoundException;
 
 }
