@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added .gitignore to parent project">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added entities and repositories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +16,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="module-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,19 +49,24 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "chat-gpt-logic",
-    "last_opened_file_path": "E:/java/ai-telegram-bot/admin-api/src/main/java/com/orik/adminapi/DAO"
+    "last_opened_file_path": "E:/java/ai-telegram-bot/admin-api/src/main/java/com/orik/adminapi"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi\DAO" />
       <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi" />
+      <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi\DAO" />
       <recent name="E:\java\ai-telegram-bot" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.orik.adminapi.controller" />
+      <recent name="com.orik.adminapi.constant" />
+      <recent name="com.orik.adminapi.exception" />
+      <recent name="com.orik.adminapi.DTO.user" />
       <recent name="com.orik.botapi.exception" />
     </key>
   </component>
@@ -152,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700738717941</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added entities and repositories">
+      <created>1700739333440</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700739333440</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -162,6 +173,7 @@
     <MESSAGE value="added user registration in first &quot;/start&quot;" />
     <MESSAGE value="added history for chat" />
     <MESSAGE value="added .gitignore to parent project" />
-    <option name="LAST_COMMIT_MESSAGE" value="added .gitignore to parent project" />
+    <MESSAGE value="added entities and repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="added entities and repositories" />
   </component>
 </project>
