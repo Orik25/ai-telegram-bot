@@ -1,5 +1,6 @@
 package com.orik.adminapi.security;
 
+import com.orik.adminapi.constant.RoleData;
 import com.orik.adminapi.entity.User;
 import com.orik.adminapi.exception.CustomAuthenticationException;
 import com.orik.adminapi.service.interfaces.UserService;
@@ -14,7 +15,7 @@ import java.util.Collections;
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
     private final UserService userService;
-
+    private static final String ADMIN = RoleData.ADMIN.getDBRoleName();
     @Autowired
     public CustomUserDetailsService(UserService userService) {
         this.userService = userService;
@@ -24,7 +25,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String userName)  throws CustomAuthenticationException{
         User user = userService.findByUserName(userName);
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRole().getName());
-        if(user.getPassword()==null){
+        if(user.getPassword()==null || !user.getRole().getName().equals(ADMIN)){
             throw new CustomAuthenticationException("Authentication failed");
         }
         return new org.springframework.security.core.userdetails.User(

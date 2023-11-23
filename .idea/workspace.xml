@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added entities and repositories">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added login logic with correct security">
+      <change afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/validation/UniqueUserName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/validation/UserNameUniqueValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DTO/user/AdminRegistrationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DTO/user/AdminRegistrationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
       <list>
         <option value="module-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,6 +62,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi" />
+      <recent name="E:\java\ai-telegram-bot\admin-api\src\main\resources\templates" />
       <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi\DAO" />
       <recent name="E:\java\ai-telegram-bot" />
     </key>
@@ -163,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700739333440</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added login logic with correct security">
+      <created>1700742442472</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700742442472</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -174,6 +185,7 @@
     <MESSAGE value="added history for chat" />
     <MESSAGE value="added .gitignore to parent project" />
     <MESSAGE value="added entities and repositories" />
-    <option name="LAST_COMMIT_MESSAGE" value="added entities and repositories" />
+    <MESSAGE value="added login logic with correct security" />
+    <option name="LAST_COMMIT_MESSAGE" value="added login logic with correct security" />
   </component>
 </project>
