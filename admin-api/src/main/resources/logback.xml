@@ -17,7 +17,7 @@
         </encoder>
     </appender>
 
-    <logger name="com.orik.botapi" level="debug" additivity="false">
+    <logger name="com.orik.adminapi" level="debug" additivity="false">
         <appender-ref ref="FILE-ROLLING"/>
     </logger>
 
