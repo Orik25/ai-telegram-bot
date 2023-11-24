@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+
+        <!--                <div class="pb-4">-->
+        <!--                    <a href="#" th:href="@{/login(logout)}"-->
+        <!--                       class="nav-link px-0 d-flex align-items-center justify-content-center text-dark">-->
+        <!--                        <i class="fs-4 bi-door-open-fill"></i> <span class="ms-1 d-none d-sm-inline">Log out</span> </a>-->
+        <!--                </div>-->
+
+
+
+        <!-- USERS LIST -->
+        <div class="col py-3">
+            <h3>Users</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div th:fragment="history">
+
+                        <div class="col-md-12">
+
+
+                            <table id="historyTable" class="table table-striped table-responsive-md">
+                                <thead>
+                                <tr>
+                                    <th COLSPAN="4">
+                                        <form th:action="@{/system/search-users}" method="get">
+                                            <div class="input-group mb-3 " style="width: 25%;">
+                                                <input type="text" class="form-control" name="searchValue" placeholder="Search..." th:value="${searchValue}"/>
+                                                <select class="form-select" name="searchField">
+                                                    <option value="user_name" th:selected="${searchField == 'user_name'}">User Name</option>
+                                                    <option value="first_name" th:selected="${searchField == 'first_name'}">First Name</option>
+                                                </select>
+                                                <button class="btn btn-outline-secondary" type="submit">Search</button>
+                                            </div>
+                                        </form>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th COLSPAN="4">
+                                        <a class="text-dark" th:href="@{/system/users}" style="text-decoration: none;">Default
+                                            list</a>
+                                    </th>
+                                </tr>
+
+
+                                <tr>
+                                    <th>
+                                        UserName
+                                        <a class="text-warning"
+                                           th:href="@{/system/users(sortField='userName', sortOrder='asc')}"
+                                           style="text-decoration: none;">▲</a>
+                                        <a class="text-dark"
+                                           th:href="@{/system/users(sortField='userName', sortOrder='desc')}"
+                                           style="text-decoration: none;">▼</a>
+                                    </th>
+                                    <th>
+                                        First-LastName
+                                        <a class="text-warning"
+                                           th:href="@{/system/users(sortField='firstName', sortOrder='asc')}"
+                                           style="text-decoration: none;">▲</a>
+                                        <a class="text-dark"
+                                           th:href="@{/system/users(sortField='firstName', sortOrder='desc')}"
+                                           style="text-decoration: none;">▼</a>
+                                    </th>
+
+                                    <th>History</th>
+                                    <th>Send Message</th>
+                                </tr>
+
+
+                                </thead>
+                                <tbody>
+                                <div th:switch="${usersPage.content.size()}" class="container my-3">
+                                    <tr th:case="0">
+                                        <th COLSPAN="4">
+                                            <h2 CLASS=" d-flex align-items-center justify-content-center">No Requests
+                                                found</h2>
+                                        </th>
+                                    </tr>
+
+                                    <div th:case="*">
+                                        <tr th:each="user : ${usersPage.content}">
+                                            <td th:text="${user?.userName}"></td>
+                                            <td th:text="${user.firstName + ' ' + (user.lastName != null ? user.lastName : '')}"></td>
+
+                                            <td>
+                                                <a th:href="@{/system/users/history/{id}(id=${user.userId})}"
+                                                   class="btn btn-warning">
+                                                    <i class="fas fa-sync-alt ml-2"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a th:href="@{/system/users/send-message/{id}(id=${user.userId})}"
+                                                   class="btn btn-warning">
+                                                    <i class="fas fa-solid fa-ban ml 2"></i>
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td COLSPAN="4">
+                                                <div th:if="${usersPage.totalPages > 1}"
+                                                     class="d-flex justify-content-center my-3">
+                                                    <ul class="pagination">
+                                                        <li class="page-item"
+                                                            th:classappend="${usersPage.first ? 'disabled' : ''}">
+                                                            <a class="page-link bg-warning text-dark"
+                                                               th:href="@{${searchValue} ? '/system/search-users?page=' + ${(usersPage.number - 1)} +'&size=' + ${usersPage.size} + '&searchField=' + ${searchField} + '&searchValue=' + ${searchValue} : '/system/users?page=' + ${(usersPage.number - 1)} +'&size=' + ${usersPage.size} + '&sortField=' + ${sortField} + '&sortOrder=' + ${sortOrder}}">&laquo;</a>
+                                                        </li>
+                                                        <li class="page-item"
+                                                            th:each="pageNumber : ${#numbers.sequence(0, usersPage.totalPages - 1)}">
+                                                            <a class="page-link bg-warning text-dark"
+                                                               th:href="@{${searchValue} ? '/system/search-users?page=' + ${pageNumber} + '&size=' + ${usersPage.size} + '&searchField=' + ${searchField} + '&searchValue=' + ${searchValue} : '/system/users?page=' + ${pageNumber} + '&size=' + ${usersPage.size} + '&sortField=' + ${sortField} + '&sortOrder=' + ${sortOrder}}"
+                                                               th:classappend="${usersPage.number == pageNumber ? 'active border border-dark' : ''}"
+                                                               th:text="${pageNumber + 1}"></a>
+                                                        </li>
+                                                        <li class="page-item"
+                                                            th:classappend="${usersPage.last ? 'disabled' : ''}">
+                                                            <a class="page-link bg-warning text-dark"
+                                                               th:href="@{${searchValue} ? '/system/search-users?page=' + ${(usersPage.number + 1)} + '&size=' + ${usersPage.size} + '&searchField=' + ${searchField} + '&searchValue=' + ${searchValue} : '/system/users?page=' + ${(usersPage.number + 1)} + '&size=' +${usersPage.size} + '&sortField=' + ${sortField} + '&sortOrder=' + ${sortOrder}}">&raquo;</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+
+                                    </div>
+                                </div>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added history for chat">
-      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/MessageServiceImpl.java" afterDir="false" />
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added admin page with users">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/AdminApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/AdminApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="module-info" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -46,18 +56,29 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;chat-gpt-logic&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/java/multy-server-solver&quot;
+    &quot;last_opened_file_path&quot;: &quot;E:/java/testBOT&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi" />
+      <recent name="E:\java\ai-telegram-bot\admin-api\src\main\resources\templates" />
+      <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi\DAO" />
+      <recent name="E:\java\ai-telegram-bot" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.orik.botapi.exception" />
+      <recent name="com.orik.adminapi.DTO.message" />
+      <recent name="com.orik.adminapi.config" />
+      <recent name="com.orik.adminapi.controller" />
+      <recent name="com.orik.adminapi.constant" />
+      <recent name="com.orik.adminapi.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.start-bot">
+  <component name="RunManager" selected="Application.start-admin">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -136,7 +157,42 @@
       <option name="project" value="LOCAL" />
       <updated>1700680412178</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added .gitignore to parent project">
+      <created>1700738717941</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700738717941</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added entities and repositories">
+      <created>1700739333440</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700739333440</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added login logic with correct security">
+      <created>1700742442472</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700742442472</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added registration logic&#10;fixed bug with login non-admin role">
+      <created>1700743651183</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700743651183</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added admin page with users">
+      <created>1700752086331</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700752086331</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,6 +201,11 @@
     <MESSAGE value="added logging logic for bot" />
     <MESSAGE value="added user registration in first &quot;/start&quot;" />
     <MESSAGE value="added history for chat" />
-    <option name="LAST_COMMIT_MESSAGE" value="added history for chat" />
+    <MESSAGE value="added .gitignore to parent project" />
+    <MESSAGE value="added entities and repositories" />
+    <MESSAGE value="added login logic with correct security" />
+    <MESSAGE value="added registration logic&#10;fixed bug with login non-admin role" />
+    <MESSAGE value="added admin page with users" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin page with users" />
   </component>
 </project>

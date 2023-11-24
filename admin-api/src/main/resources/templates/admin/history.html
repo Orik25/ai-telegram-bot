@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Users</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-8 py-3"> <!-- Додав col-8 для обмеження ширини -->
+      <h3 class="text-center">Chat history</h3>
+      <div class="card">
+        <div class="card-body">
+          <div th:fragment="history">
+            <div class="container">
+              <div class="col-md-12">
+                <table id="historyTable" class="table table-striped table-responsive-md">
+                  <thead>
+                  <tr>
+                    <th COLSPAN="2">
+                      <form th:action="@{/system/users/send-message/{id}(id=${userId})}" method="post">
+                        <div class="input-group mb-3" style="width: 30%;">
+                          <input type="text" class="form-control" name="messageToSend" placeholder="Message to send..."
+                                 th:value="${messageToSend}" />
+                          <button class="btn btn-outline-secondary" type="submit">Send</button>
+                        </div>
+                      </form>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      From
+                    </th>
+                    <th>
+                      Text
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <div th:switch="${messages.size()}" class="container my-3">
+                    <tr th:case="0">
+                      <th COLSPAN="2">
+                        <h2 CLASS=" d-flex align-items-center justify-content-center">No messages
+                          found</h2>
+                      </th>
+                    </tr>
+                    <div th:case="*">
+                      <tr th:each="message : ${messages}">
+                        <td><strong th:text="${message.fromUser.firstName}"></strong></td>
+                        <td th:text="${message.text}"></td>
+                      </tr>
+
+                    </div>
+                  </div>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
