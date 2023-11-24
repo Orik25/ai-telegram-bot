@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added admin page with users">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with logging(debug layer)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="admin-side-logic" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -185,7 +185,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700752086331</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed bug with lombok version">
+      <created>1700818650359</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700818650359</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixed bug with logging(debug layer)">
+      <created>1700818964174</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700818964174</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -199,6 +213,8 @@
     <MESSAGE value="added login logic with correct security" />
     <MESSAGE value="added registration logic&#10;fixed bug with login non-admin role" />
     <MESSAGE value="added admin page with users" />
-    <option name="LAST_COMMIT_MESSAGE" value="added admin page with users" />
+    <MESSAGE value="fixed bug with lombok version" />
+    <MESSAGE value="fixed bug with logging(debug layer)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with logging(debug layer)" />
   </component>
 </project>

@@ -22,6 +22,7 @@ import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScopeDefault;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -121,12 +122,25 @@ public class TelegramBot extends TelegramLongPollingBot {
         for (String message : messages) {
             prompt.add(new ChatMessage("user", message));
         }
-        OpenAiService service = new OpenAiService(chatGPTConfig.getToken());
+        OpenAiService service = new OpenAiService(chatGPTConfig.getToken(), Duration.ofSeconds(20));
         ChatCompletionRequest completionRequest = ChatCompletionRequest.builder()
                 .messages(prompt)
                 .model(chatGPTConfig.getModel())
                 .build();
 
-        return service.createChatCompletion(completionRequest).getChoices().get(0).getMessage().getContent();
+        try {
+            return service.createChatCompletion(completionRequest).getChoices().get(0).getMessage().getContent();
+        } catch (Exception e) {
+            log.error("Timeout exception occurred: " + e.getMessage());
+            log.info("Sending the message again!");
+            try {
+                return service.createChatCompletion(completionRequest).getChoices().get(0).getMessage().getContent();
+            }catch (Exception ex){
+                log.error("Timeout exception occurred: " + ex.getMessage());
+                return "Sorry, the response time has expired!";
+            }
+        }
+
+
     }
 }
