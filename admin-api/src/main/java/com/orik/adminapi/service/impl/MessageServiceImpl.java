@@ -6,11 +6,13 @@ import com.orik.adminapi.DTO.message.NewMessageDTO;
 import com.orik.adminapi.entity.Message;
 import com.orik.adminapi.exception.UserNotFoundException;
 import com.orik.adminapi.service.interfaces.MessageService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class MessageServiceImpl implements MessageService {
     private final MessageRepository messageRepository;
@@ -28,7 +30,7 @@ public class MessageServiceImpl implements MessageService {
         try{
             newMessage = messageConverterDTO.convertToEntity(message);
         }catch (UserNotFoundException ex){
-            //log.error("Error occurred: " + ex.getMessage());
+            log.error("Error occurred: " + ex.getMessage());
         }
         if(newMessage == null){
             return null;

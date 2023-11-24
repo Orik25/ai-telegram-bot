@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added admin page with users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/AdminApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/AdminApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,15 +54,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "chat-gpt-logic",
-    "last_opened_file_path": "E:/java/testBOT"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chat-gpt-logic&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/java/testBOT&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi" />
