@@ -8,4 +8,5 @@ import java.util.List;
 public interface MessageService {
     Message addNew(NewMessageDTO message);
     List<Message> findByUserId(Long id);
+    void deleteByUserId(Long id);
 }

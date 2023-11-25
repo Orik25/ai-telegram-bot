@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with logging(debug layer)">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/service/impl/TelegramBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/admin-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/admin-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/history.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700818964174</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)">
+      <created>1700827218842</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700827218842</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,6 +227,7 @@
     <MESSAGE value="added admin page with users" />
     <MESSAGE value="fixed bug with lombok version" />
     <MESSAGE value="fixed bug with logging(debug layer)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with logging(debug layer)" />
+    <MESSAGE value="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)" />
   </component>
 </project>

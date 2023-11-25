@@ -30,7 +30,7 @@ public class UserController {
     @GetMapping("/users")
     public String getUsers(Model model,
                            @RequestParam(name = "page", defaultValue = "0") int page,
-                           @RequestParam(name = "size", defaultValue = "4") int size,
+                           @RequestParam(name = "size", defaultValue = "1") int size,
                            @RequestParam(name = "sortField", defaultValue = "userId") String sortField,
                            @RequestParam(name = "sortOrder", defaultValue = "desc") String sortOrder) {
         model.addAttribute("usersPage", userService.getAllUsersSorted(page, size, sortField, sortOrder, roleService.getUserRole().getRoleId()));
@@ -42,7 +42,7 @@ public class UserController {
     public String searchDriversByLastName(@RequestParam(name = "searchField") String searchField,
                                           @RequestParam(name = "searchValue") String searchValue,
                                           @RequestParam(name = "page", defaultValue = "0") int page,
-                                          @RequestParam(name = "size", defaultValue = "4") int size,
+                                          @RequestParam(name = "size", defaultValue = "1") int size,
                                           Model model) {
         Pageable pageable = PageRequest.of(page, size);
         Page<User> usersPage = userService.findByFieldContainingIgnoreCase(searchField,searchValue, pageable);
