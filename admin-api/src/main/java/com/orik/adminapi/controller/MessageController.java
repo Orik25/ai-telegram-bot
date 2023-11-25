@@ -48,6 +48,14 @@ public class MessageController {
 
     }
 
+    @GetMapping("/delete-history/{userId}")
+    public String deleteHistory(@PathVariable Long userId, Model model) {
+        log.info("Deleting history of user: " + userService.findById(userId).getChatId());
+        messageService.deleteByUserId(userId);
+        return "redirect:/system/users/history/" + userId;
+
+    }
+
     @PostMapping("/send-message/{id}")
     public String sendMessage(@PathVariable Long id, @RequestParam String messageToSend) {
         Long chatId;

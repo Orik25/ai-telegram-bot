@@ -8,7 +8,9 @@ import com.orik.adminapi.exception.UserNotFoundException;
 import com.orik.adminapi.service.interfaces.MessageService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -42,6 +44,13 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public List<Message> findByUserId(Long id) {
-        return messageRepository.findByFromUserUserIdOrToUserUserId(id,id);
+        Sort sort = Sort.by(Sort.Order.desc("messageId"));
+        return messageRepository.findByFromUserUserIdOrToUserUserId(id,id,sort);
+    }
+
+    @Override
+    @Transactional
+    public void deleteByUserId(Long id) {
+        messageRepository.deleteByFromUserUserIdOrToUserUserId(id,id);
     }
 }

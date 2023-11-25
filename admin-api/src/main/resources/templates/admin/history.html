@@ -37,6 +37,16 @@
                           <button class="btn btn-outline-secondary" type="submit">Send</button>
                         </div>
                       </form>
+                      <form th:action="@{/system/users/delete-history/{id}(id=${userId})}" method="get">
+                        <div class="input-group mb-3" style="width: 30%;">
+                          <button class="btn btn-outline-secondary" type="submit">Clear History</button>
+                        </div>
+                      </form>
+                      <form th:action="@{/system/users}" method="get">
+                        <div class="input-group mb-3" style="width: 30%;">
+                          <button class="btn btn-outline-secondary" type="submit"><--Back</button>
+                        </div>
+                      </form>
                     </th>
                   </tr>
                   <tr>
