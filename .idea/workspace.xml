@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added deleting history">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="edit pom file for build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/test/java/com/orik/adminapi/AdminApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/test/java/com/orik/adminapi/AdminApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/test/java/com/orik/botapi/BotApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/test/java/com/orik/botapi/BotApiApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <recent name="com.orik.adminapi.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.start-bot">
+  <component name="RunManager" selected="JUnit.BotApiApplicationTests.contextLoads">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -92,6 +91,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BotApiApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bot-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.orik.botapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.orik.botapi" />
+      <option name="MAIN_CLASS_NAME" value="com.orik.botapi.BotApiApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,7 +121,13 @@
     <list>
       <item itemvalue="Application.start-admin" />
       <item itemvalue="Application.start-bot" />
+      <item itemvalue="JUnit.BotApiApplicationTests.contextLoads" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BotApiApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -215,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700930069136</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="edit pom file for build">
+      <created>1700930927322</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700930927322</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -233,6 +261,7 @@
     <MESSAGE value="fixed bug with logging(debug layer)" />
     <MESSAGE value="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)" />
     <MESSAGE value="added deleting history" />
-    <option name="LAST_COMMIT_MESSAGE" value="added deleting history" />
+    <MESSAGE value="edit pom file for build" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit pom file for build" />
   </component>
 </project>
