@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="added deleting history">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/DAO/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/impl/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/java/com/orik/adminapi/service/interfaces/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/admin-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/admin-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/main/resources/templates/admin/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <recent name="com.orik.adminapi.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.start-admin">
+  <component name="RunManager" selected="Application.start-bot">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -211,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700827218842</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added deleting history">
+      <created>1700930069136</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700930069136</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -228,6 +232,7 @@
     <MESSAGE value="fixed bug with lombok version" />
     <MESSAGE value="fixed bug with logging(debug layer)" />
     <MESSAGE value="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)" />
+    <MESSAGE value="added deleting history" />
+    <option name="LAST_COMMIT_MESSAGE" value="added deleting history" />
   </component>
 </project>
