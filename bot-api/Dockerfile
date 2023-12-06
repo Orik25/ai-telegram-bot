@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build ./target/bot-api-0.0.1-SNAPSHOT.jar botapi.jar
+COPY --from=build ./bot-api/target/bot-api-0.0.1-SNAPSHOT.jar botapi.jar
 EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "botapi.jar"]
