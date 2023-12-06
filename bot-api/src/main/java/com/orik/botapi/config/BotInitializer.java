@@ -22,16 +22,23 @@ public class BotInitializer {
         this.bot = bot;
     }
 
-    @Async
+
     @EventListener({ContextRefreshedEvent.class})
     public void init() throws TelegramApiException {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
-        try {
-            telegramBotsApi.registerBot(bot);
-        } catch (TelegramApiException e) {
-            log.error("Error occurred: " + e.getMessage());
-        }
 
+        if (!isBotRegistered()) {
+            try {
+                telegramBotsApi.registerBot(bot);
+                bot.setRegistered(true);
+            } catch (TelegramApiException e) {
+                log.error("Error occurred: " + e.getMessage());
+            }
+        }
+    }
+
+    private boolean isBotRegistered() {
+        return bot.isRegistered();
     }
 
 }

@@ -33,6 +33,16 @@ public class TelegramBot extends TelegramLongPollingBot {
     private final ChatGPTConfig chatGPTConfig;
     private final MessageService messageService;
     private final UserService userService;
+    private boolean registered = false;
+
+
+    public boolean isRegistered() {
+        return registered;
+    }
+
+    public void setRegistered(boolean registered) {
+        this.registered = registered;
+    }
     private static final String HELP_TEXT = "This bot is created to communicate with Chat GPT from Telegram\n\n" +
             "You can execute commands from the main menu on the left or by typing a command:\n\n" +
             "Type /start to see a welcome message\n\n" +
