@@ -1,8 +1,12 @@
 services:
   - name: admin-api
     type: web
-    dockerfile_path: admin-api/Dockerfile
+    plan: free
+    env: docker
+    dockerfilePath: ./admin-api/Dockerfile.anycable
 
   - name: bot-api
     type: web
-    dockerfile_path: bot-api/Dockerfile
+    env: docker
+    plan: free
+    dockerfilePath: ./bot-api/Dockerfile.anycable
