@@ -1,0 +1,12 @@
+services:
+  admin-api:
+    envVars:
+      - ADMIN_API_PORT=8080
+    httpPort: 8080
+    dockerfilePath: /admin-api/Dockerfile
+
+  bot-api:
+    envVars:
+      - BOT_API_PORT=8080
+    httpPort: 8081
+    dockerfilePath: /bot-api/Dockerfile
