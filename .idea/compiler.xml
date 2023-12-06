@@ -15,6 +15,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin-api" options="-parameters" />
+      <module name="ai-telegram-bot" options="" />
       <module name="bot-api" options="-parameters" />
     </option>
   </component>
