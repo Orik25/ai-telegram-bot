@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="edit pom file for build">
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with build">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/src/test/java/com/orik/adminapi/AdminApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/src/test/java/com/orik/adminapi/AdminApiApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot-api/src/test/java/com/orik/botapi/BotApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/test/java/com/orik/botapi/BotApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-api/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +26,7 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -38,9 +44,14 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/Program Files/apache-maven-3.9.5" />
         <option name="useMavenConfig" value="true" />
+        <option name="usePluginRegistry" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2YX4Q2Ifyz4kctgAKE2QyeOUy4Y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,7 +65,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;chat-gpt-logic&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/java/testBOT&quot;
+    &quot;last_opened_file_path&quot;: &quot;E:/java/ai-telegram-bot&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -72,7 +84,7 @@
       <recent name="com.orik.adminapi.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BotApiApplicationTests.contextLoads">
+  <component name="RunManager" selected="Docker.admin-api/Dockerfile">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -118,13 +130,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="admin-api/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="admin-api/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="bot-api/Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="maven3.8.5-openjdk-17_build" />
+          <option name="buildCliOptions" value="--target build" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="bot-api/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="bot-api/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="bot-api/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.start-admin" />
       <item itemvalue="Application.start-bot" />
+      <item itemvalue="Docker.bot-api/Dockerfile build" />
+      <item itemvalue="Docker.bot-api/Dockerfile" />
+      <item itemvalue="Docker.admin-api/Dockerfile" />
       <item itemvalue="JUnit.BotApiApplicationTests.contextLoads" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.admin-api/Dockerfile" />
+        <item itemvalue="Docker.bot-api/Dockerfile build" />
+        <item itemvalue="Docker.bot-api/Dockerfile" />
         <item itemvalue="JUnit.BotApiApplicationTests.contextLoads" />
       </list>
     </recent_temporary>

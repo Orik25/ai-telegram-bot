@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  admin-api:
+    container_name: admin-container
+    build:
+      context: /admin-api
+    ports:
+      - "8080:8080"
+
+  bot-api:
+    container_name: bot-container
+    build:
+      context: /bot-api
+    ports:
+      - "8081:8080"
