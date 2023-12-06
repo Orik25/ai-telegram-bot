@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with build" />
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="edit render.yaml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,7 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700930927322</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added dockerfiles">
+      <created>1701881507193</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701881507193</updated>
+    </task>
+    <task id="LOCAL-00017" summary="edit render.yaml">
+      <created>1701881974812</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701881974812</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -305,6 +319,8 @@
     <MESSAGE value="fixed bug with timeout response&#10;(the same request send again to bot after 20sec. of waiting)" />
     <MESSAGE value="added deleting history" />
     <MESSAGE value="edit pom file for build" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit pom file for build" />
+    <MESSAGE value="added dockerfiles" />
+    <MESSAGE value="edit render.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit render.yaml" />
   </component>
 </project>
