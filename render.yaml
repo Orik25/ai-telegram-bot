@@ -1,10 +1,14 @@
 services:
-  - type: web
-    name: admin-api
-    buildCommand: /admin-api
-    startCommand: /admin-api
+  - name: admin-api
+    type: web
+    env: java
+    build_command: mvn clean package
+    start_command: java -jar adminapi.jar
+    dockerfile_path: ./admin-api/Dockerfile
 
-  - type: web
-    name: bot-api
-    buildCommand: /bot-api
-    startCommand: /bot-api
+  - name: bot-api
+    type: web
+    env: java
+    build_command: mvn clean package
+    start_command: java -jar botapi.jar
+    dockerfile_path: ./bot-api/Dockerfile
