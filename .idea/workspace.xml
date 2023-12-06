@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="edit bot config" />
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="edit bot Dockerfile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/config/BotInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/java/com/orik/botapi/config/BotInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bot-api/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +79,7 @@
       <recent name="com.orik.adminapi.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.admin-api/Dockerfile">
+  <component name="RunManager" selected="Application.start-bot">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -343,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701893060974</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="edit bot Dockerfile">
+      <created>1701893298892</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1701893298892</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -365,6 +376,7 @@
     <MESSAGE value="added dockerfiles" />
     <MESSAGE value="edit render.yaml" />
     <MESSAGE value="edit bot config" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit bot config" />
+    <MESSAGE value="edit bot Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit bot Dockerfile" />
   </component>
 </project>
