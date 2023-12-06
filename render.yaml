@@ -1,12 +1,10 @@
 services:
   - type: web
     name: admin-api
-    env: standard
     buildCommand: /admin-api
     startCommand: /admin-api
 
   - type: web
     name: bot-api
-    env: standard
     buildCommand: /bot-api
     startCommand: /bot-api
