@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/admin-api-0.0.1-SNAPSHOT.jar adminapi.jar
+COPY --from=build ./target/admin-api-0.0.1-SNAPSHOT.jar adminapi.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "adminapi.jar"]
