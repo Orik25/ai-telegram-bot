@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with build">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-api/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="14f77708-4f97-4ff4-a69b-d6dea8ac61fc" name="Changes" comment="fixed bug with build" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,17 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "chat-gpt-logic",
-    "last_directory_selection": "E:/java/ai-telegram-bot/admin-api/src/test/java",
-    "last_opened_file_path": "E:/java/multy-server-solver",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chat-gpt-logic&quot;,
+    &quot;last_directory_selection&quot;: &quot;E:/java/ai-telegram-bot/admin-api/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/java/multy-server-solver&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java\ai-telegram-bot\admin-api\src\main\java\com\orik\adminapi" />
@@ -79,7 +76,7 @@
       <recent name="com.orik.adminapi.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTests">
+  <component name="RunManager" selected="JUnit.MessageServiceTests">
     <configuration name="start-admin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -98,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminApiApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MessageServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin-api" />
       <extension name="coverage">
         <pattern>
@@ -107,13 +104,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.orik.adminapi" />
-      <option name="MAIN_CLASS_NAME" value="com.orik.adminapi.AdminApiApplicationTests" />
+      <option name="MAIN_CLASS_NAME" value="com.orik.adminapi.MessageServiceTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoleServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MessageServiceTests.testAddNew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin-api" />
       <extension name="coverage">
         <pattern>
@@ -122,8 +119,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.orik.adminapi" />
-      <option name="MAIN_CLASS_NAME" value="com.orik.adminapi.RoleServiceTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.orik.adminapi.MessageServiceTests" />
+      <option name="METHOD_NAME" value="testAddNew" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,19 +193,19 @@
     <list>
       <item itemvalue="Application.start-admin" />
       <item itemvalue="Application.start-bot" />
-      <item itemvalue="JUnit.AdminApiApplicationTests" />
-      <item itemvalue="JUnit.RoleServiceTests" />
+      <item itemvalue="JUnit.MessageServiceTests" />
+      <item itemvalue="JUnit.MessageServiceTests.testAddNew" />
       <item itemvalue="JUnit.UserServiceTests" />
       <item itemvalue="JUnit.UserServiceTests.testFindByFieldContainingIgnoreCase" />
       <item itemvalue="JUnit.UserServiceTests.testFindByFieldContainingIgnoreCaseNotFound" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MessageServiceTests" />
+        <item itemvalue="JUnit.MessageServiceTests.testAddNew" />
         <item itemvalue="JUnit.UserServiceTests" />
         <item itemvalue="JUnit.UserServiceTests.testFindByFieldContainingIgnoreCaseNotFound" />
         <item itemvalue="JUnit.UserServiceTests.testFindByFieldContainingIgnoreCase" />
-        <item itemvalue="JUnit.RoleServiceTests" />
-        <item itemvalue="JUnit.AdminApiApplicationTests" />
       </list>
     </recent_temporary>
   </component>
